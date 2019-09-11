@@ -13,7 +13,7 @@ if($_POST['url'] == NULL){
 $emails = scrape_email($url);
 if($emails == null){
     header("Location:index.php");
-    $_SESSION['error'] = "Aucunes adresse mails trouvées.";
+    $_SESSION['error'] = "Aucune adresse mail trouvée.";
     exit;
 }
 
