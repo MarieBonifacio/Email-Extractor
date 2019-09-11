@@ -6,7 +6,6 @@
 body{
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 #container{
@@ -17,17 +16,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-image: url(butterfly.jpg);
     background-size: cover;
-    background-repeat: no-repeat; */
-    /* background-image: linear-gradient(45deg, rgba(194, 194, 194, 0.1) 0%, rgba(194, 194, 194, 0.1) 42%,rgba(230, 230, 230, 0.1) 42%, rgba(230, 230, 230, 0.1) 61%,rgba(55, 55, 55, 0.1) 61%, rgba(55, 55, 55, 0.1) 97%,rgba(221, 221, 221, 0.1) 97%, rgba(221, 221, 221, 0.1) 100%),linear-gradient(45deg, rgba(70, 70, 70, 0.03) 0%, rgba(70, 70, 70, 0.03) 33%,rgba(230, 230, 230, 0.03) 33%, rgba(230, 230, 230, 0.03) 45%,rgba(64, 64, 64, 0.03) 45%, rgba(64, 64, 64, 0.03) 46%,rgba(167, 167, 167, 0.03) 46%, rgba(167, 167, 167, 0.03) 48%,rgba(106, 106, 106, 0.03) 48%, rgba(106, 106, 106, 0.03) 74%,rgba(21, 21, 21, 0.03) 74%, rgba(21, 21, 21, 0.03) 94%,rgba(186, 186, 186, 0.03) 94%, rgba(186, 186, 186, 0.03) 96%,rgba(12, 12, 12, 0.03) 96%, rgba(12, 12, 12, 0.03) 100%),linear-gradient(135deg, rgba(31, 31, 31, 0.08) 0%, rgba(31, 31, 31, 0.08) 22%,rgba(201, 201, 201, 0.08) 22%, rgba(201, 201, 201, 0.08) 33%,rgba(93, 93, 93, 0.08) 33%, rgba(93, 93, 93, 0.08) 53%,rgba(240, 240, 240, 0.08) 53%, rgba(240, 240, 240, 0.08) 71%,rgba(136, 136, 136, 0.08) 71%, rgba(136, 136, 136, 0.08) 79%,rgba(5, 5, 5, 0.08) 79%, rgba(5, 5, 5, 0.08) 100%),linear-gradient(0deg, rgba(237, 237, 237, 0.04) 0%, rgba(237, 237, 237, 0.04) 9%,rgba(210, 210, 210, 0.04) 9%, rgba(210, 210, 210, 0.04) 49%,rgba(125, 125, 125, 0.04) 49%, rgba(125, 125, 125, 0.04) 76%,rgba(165, 165, 165, 0.04) 76%, rgba(165, 165, 165, 0.04) 78%,rgba(149, 149, 149, 0.04) 78%, rgba(149, 149, 149, 0.04) 81%,rgba(241, 241, 241, 0.04) 81%, rgba(241, 241, 241, 0.04) 85%,rgba(45, 45, 45, 0.04) 85%, rgba(45, 45, 45, 0.04) 100%),linear-gradient(90deg, rgb(114, 210, 86),rgb(12, 107, 39));  */
-    background-image: linear-gradient(45deg, rgba(194, 194, 194, 0.1) 0%, rgba(194, 194, 194, 0.1) 42%,rgba(230, 230, 230, 0.1) 42%, rgba(230, 230, 230, 0.1) 61%,rgba(55, 55, 55, 0.1) 61%, rgba(55, 55, 55, 0.1) 97%,rgba(221, 221, 221, 0.1) 97%, rgba(221, 221, 221, 0.1) 100%),linear-gradient(45deg, rgba(70, 70, 70, 0.03) 0%, rgba(70, 70, 70, 0.03) 33%,rgba(230, 230, 230, 0.03) 33%, rgba(230, 230, 230, 0.03) 45%,rgba(64, 64, 64, 0.03) 45%, rgba(64, 64, 64, 0.03) 46%,rgba(167, 167, 167, 0.03) 46%, rgba(167, 167, 167, 0.03) 48%,rgba(106, 106, 106, 0.03) 48%, rgba(106, 106, 106, 0.03) 74%,rgba(21, 21, 21, 0.03) 74%, rgba(21, 21, 21, 0.03) 94%,rgba(186, 186, 186, 0.03) 94%, rgba(186, 186, 186, 0.03) 96%,rgba(12, 12, 12, 0.03) 96%, rgba(12, 12, 12, 0.03) 100%),linear-gradient(135deg, rgba(31, 31, 31, 0.08) 0%, rgba(31, 31, 31, 0.08) 22%,rgba(201, 201, 201, 0.08) 22%, rgba(201, 201, 201, 0.08) 33%,rgba(93, 93, 93, 0.08) 33%, rgba(93, 93, 93, 0.08) 53%,rgba(240, 240, 240, 0.08) 53%, rgba(240, 240, 240, 0.08) 71%,rgba(136, 136, 136, 0.08) 71%, rgba(136, 136, 136, 0.08) 79%,rgba(5, 5, 5, 0.08) 79%, rgba(5, 5, 5, 0.08) 100%),linear-gradient(0deg, rgba(237, 237, 237, 0.04) 0%, rgba(237, 237, 237, 0.04) 9%,rgba(210, 210, 210, 0.04) 9%, rgba(210, 210, 210, 0.04) 49%,rgba(125, 125, 125, 0.04) 49%, rgba(125, 125, 125, 0.04) 76%,rgba(165, 165, 165, 0.04) 76%, rgba(165, 165, 165, 0.04) 78%,rgba(149, 149, 149, 0.04) 78%, rgba(149, 149, 149, 0.04) 81%,rgba(241, 241, 241, 0.04) 81%, rgba(241, 241, 241, 0.04) 85%,rgba(45, 45, 45, 0.04) 85%, rgba(45, 45, 45, 0.04) 100%),linear-gradient(90deg, rgb(114, 210, 86),rgb(12, 107, 39)); 
+    background-image: linear-gradient(45deg, rgba(70, 26, 71, 0.5) 0%, rgba(70, 26, 71, 0.5) 12.5%,rgba(62, 41, 71, 0.5) 12.5%, rgba(62, 41, 71, 0.5) 25%,rgba(53, 56, 70, 0.5) 25%, rgba(53, 56, 70, 0.5) 37.5%,rgba(45, 71, 70, 0.5) 37.5%, rgba(45, 71, 70, 0.5) 50%,rgba(36, 85, 69, 0.5) 50%, rgba(36, 85, 69, 0.5) 62.5%,rgba(28, 100, 69, 0.5) 62.5%, rgba(28, 100, 69, 0.5) 75%,rgba(19, 115, 68, 0.5) 75%, rgba(19, 115, 68, 0.5) 87.5%,rgba(11, 130, 68, 0.5) 87.5%, rgba(11, 130, 68, 0.5) 100%),linear-gradient(135deg, rgb(46, 111, 92) 0%, rgb(46, 111, 92) 12.5%,rgb(43, 99, 87) 12.5%, rgb(43, 99, 87) 25%,rgb(40, 87, 82) 25%, rgb(40, 87, 82) 37.5%,rgb(37, 75, 77) 37.5%, rgb(37, 75, 77) 50%,rgb(34, 62, 73) 50%, rgb(34, 62, 73) 62.5%,rgb(31, 50, 68) 62.5%, rgb(31, 50, 68) 75%,rgb(28, 38, 63) 75%, rgb(28, 38, 63) 87.5%,rgb(25, 26, 58) 87.5%, rgb(25, 26, 58) 100%);
 }
 
 h1{
     font-family: "Green Nature";
     font-size: 5em;
     text-align: center;
+    color: white;
 }
 
 #cadre{
@@ -39,7 +36,7 @@ h1{
     justify-content: center;
     align-items: center;
     border: none;
-    background-color: rgba(72,139,48,0.5);
+    background-color: rgba(29, 98, 52, 0.609);
     box-shadow: 0px 10px 35px -1px rgba(0,0,0,0.52);
     padding: 15px;
 }
@@ -53,7 +50,6 @@ form{
 }
 
 #error{
-    height: 40px;
     width: 50vw;
     text-align: center;
     font-size: 2em;
@@ -91,10 +87,10 @@ form{
 }
 
 .myButton {
-	box-shadow: 0 9px #2e9514a8;
-	background-color:#44c767;
+	box-shadow: 0 9px #107a30a8;
+	background-color:#3ba758;
 	border-radius:13px;
-	border:1px solid #18ab29;
+	border:1px solid #18ab55;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -104,10 +100,11 @@ form{
 	text-decoration:none;
     text-shadow:0px 0px 0px #2f6627;
     font-size: 1em;
-    
+    font-weight: bolder;
+    transition: 1s;
 }
 .myButton:hover {
-	background-color:#5cbf2a;
+	background-color:#52e772;
 }
 .myButton:active {
 	position:relative;
