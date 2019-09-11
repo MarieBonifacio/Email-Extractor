@@ -14,7 +14,7 @@ session_start();
     <div id="container">
         <div><h1>Email Extractor</h1></div>
         <div id="cadre">
-            <form action="email_scrape.php" method="post"> 
+            <form action="email_extractor.php" method="post"> 
                 <div id="divUrl">
                     <input type="url" id="url" name="url" placeholder="Adresse URL">
                 </div><br>
