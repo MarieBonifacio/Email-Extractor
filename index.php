@@ -19,7 +19,7 @@ session_start();
                     <input type="url" id="url" name="url" placeholder="Adresse URL">
                 </div><br>
                 <div>
-                    <button type="submit" class="myButton" id="bouton" value="Click!">Récupérer</button>
+                    <button type="submit" class="myButton" id="bouton" value="Click!">Extraire</button>
                 </div>
             </form>
         </div>

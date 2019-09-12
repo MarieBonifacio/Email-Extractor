@@ -44,20 +44,22 @@ function scrape_email($url) {
     $result = strtolower($result);
 
 
-    // Remplace les adresses protégées contre les bots (xxxATgmmailDOTcom)// 
-    $result = preg_replace('#[(\\[\\<]?AT[)\\]\\>]?\\s*(\\w*)\\s*[(\\[\\<]?DOT[)\\]\\>]?\\s*([a-z]{2,5})#ms', '@$1.$4', $result);
-    // Email matches/ va chercher les emails nettoyés avec le preg_replace si besoin
-    preg_match_all('#\\b([\\w\\._]*)[\\s(]*@[\\s)]*([\\w_\\-]{3,})\\s*\\.\\s*([a-z]{2,5})\\b#msi', $result, $matches);
+    // Replace EMAIL DOT COM - adresse protégées contre les bots (xxxATgmmailDOTcom)// 
+    //$result = preg_replace('#[(\\[\\<]?AT[)\\]\\>]?\\s*(\\w*)\\s*[(\\[\\<]?DOT[)\\]\\>]?\\s*([a-z]{2,5})#ms', '@$1.$4', $result);
+    $result = preg_replace("#([\w\d\.\-\_\+]+)(@|AT|\[@\])([\w\d\.\-\_]{3,})(\.|DOT)([a-zA-Z]{2,5})#", "$1@$3.$5",$result);
     
-    $usernames = $matches[1];
-    $accounts = $matches[2];
-    $suffixes = $matches[3];
+    //Va chercher les emails nettoyés avec le preg_replace si besoin et /!\ également les adresses mails sous forme de liens
+    
+    //preg_match_all('#\\b([\\w\\._]*)[\\s(]*@[\\s)]*([\\w_\\-]{3,})\\s*\\.\\s*([a-z]{2,5})\\b#msi', $result, $matches);
+    //preg_match_all('#([a-zA-Z0-9-_\.]*)@([a-zA-Z0-9-_\.]{3,})[.]([a-zA-Z]{2,5})#',$result,$matches);
+    preg_match_all("#([\w\d\.\-\_\+]+)@([\w\d\.\-\_]{3,})\.([a-zA-Z]{2,5})#", $result, $matches);
+    
     $emails = array();
-    for ($i = 0; $i < count($usernames); $i++) {
-        $emails[$i] = $usernames[$i] . '@' . $accounts[$i] . '.' . $suffixes[$i];
+    foreach($matches[0] as $mail){
+        $emails[] = $mail;
     }
     
-return $emails;
+return array_unique($emails);
 }
 function clean($str) {
     if ( !is_string($str) ) {
